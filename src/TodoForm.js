@@ -11,12 +11,12 @@ import React, { useState } from "react";
  */
 
 const initialData = {
-  "title": "Title",
-  "description": "Description",
+  "title": "",
+  "description": "",
   "priority": 1,
 }
 
-function TodoForm({addTodo}) {
+function TodoForm({handleSave}) {
   let [formData, setFormData] = useState(initialData);
   /** Update form input. */
   function handleChange(evt) {
@@ -24,14 +24,14 @@ function TodoForm({addTodo}) {
 
     setFormData(data => ({
       ...data,
-      [name]: value
+      [name]: value,
     }));
   }
 
   /** Call parent function and clear form. */
   function handleSubmit(evt) {
     evt.preventDefault();
-    addTodo(formData);
+    handleSave(formData);
     setFormData(initialData);
   }
 
