@@ -26,11 +26,11 @@ function EditableTodo() {
   return (
       <div className="EditableTodo">
 
-                EITHER
+                {/* EITHER
 
                 <TodoForm />
 
-                OR
+                OR */}
 
                 <div className="mb-3">
                   <div className="float-end text-sm-end">

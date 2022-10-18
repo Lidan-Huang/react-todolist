@@ -16,7 +16,7 @@ const initialData = {
   "priority": 1,
 }
 
-function TodoForm({handleSave}) {
+function TodoForm({addOrEdit}) {
   let [formData, setFormData] = useState(initialData);
   /** Update form input. */
   function handleChange(evt) {
@@ -31,7 +31,7 @@ function TodoForm({handleSave}) {
   /** Call parent function and clear form. */
   function handleSubmit(evt) {
     evt.preventDefault();
-    handleSave(formData);
+    addOrEdit(formData);
     setFormData(initialData);
   }
 
