@@ -34,7 +34,7 @@ function EditableTodo({ todo, update, remove }) {
     <div className="EditableTodo">
 
       {isEdit
-        ? <TodoForm addOrEdit={handleSave}/>
+        ? <TodoForm addOrEdit={handleSave} initialData={todo}/>
         : <div className="mb-3">
           <div className="float-end text-sm-end">
             <button

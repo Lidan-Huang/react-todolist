@@ -81,7 +81,7 @@ function TodoApp() {
 
           <section>
             <h3 className="mb-3">Add Nü</h3>
-            <TodoForm addOrEdit={create} />
+            <TodoForm addOrEdit={create}/>
           </section>
         </div>
 

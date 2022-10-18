@@ -10,13 +10,13 @@ import React, { useState } from "react";
  * { TodoApp, EditableTodo } -> TodoForm
  */
 
-const initialData = {
+const defaultData = {
   "title": "",
   "description": "",
   "priority": 1,
 }
 
-function TodoForm({addOrEdit}) {
+function TodoForm({addOrEdit, initialData=defaultData}) {
   let [formData, setFormData] = useState(initialData);
   /** Update form input. */
   function handleChange(evt) {
